@@ -244,6 +244,11 @@ img {
 #reported{
   display: none;
 }
+.qna{
+  margin:0 10%;
+  padding: 20px;
+  border: 3px solid black;
+}
 
 @media only screen and (max-width: 992px) {
   #posts {
