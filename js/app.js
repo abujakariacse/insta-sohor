@@ -54,6 +54,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
   // Second problem was here. User image and post image were same. Then i fix the bug.
+  // Fourth problem was below. The bug was who comment's and what was the comment.
   console.log(post);
     const userImage = post.userImage;
     const image = post.image;
@@ -126,9 +127,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0]?.user}
                       </a>
-                      ${post.comments?.text}
+                      ${post.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
