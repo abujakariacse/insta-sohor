@@ -28,7 +28,8 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // Third problem was here. Then i fix the bug.
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -53,6 +54,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
   // Second problem was here. User image and post image were same. Then i fix the bug.
+  console.log(post);
     const userImage = post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
@@ -75,7 +77,8 @@ const createPost = (post) => {
                 </button>
               </div>
 
-              <div class="post__content">
+              <div class="post__conte
+              console.log(post);nt">
                 <div class="post__medias">
                   <img
                     class="post__media"
