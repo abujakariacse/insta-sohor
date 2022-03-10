@@ -55,7 +55,6 @@ const switchTab = (id) => {
 const createPost = (post) => {
   // Second problem was here. User image and post image were same. Then i fix the bug.
   // Fourth problem was below. The bug was who comment's and what was the comment.
-  console.log(post);
     const userImage = post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
@@ -150,19 +149,23 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById( "liked" ).innerHTML = '';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
+    const div = createPost(post);
+    document.getElementById( "liked" ).appendChild(div);
+        
     });
+    
 };
 
 const displayReportedPosts = () => {
+  document.getElementById( "reported" ).innerHTML = '';
     const reportedPosts = getReportedPosts();
     // Fifth problem was here. Then i fix it.
     reportedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
+    const div = createPost(post);
+    document.getElementById( "reported" ).appendChild(div);
     });
 };
 
